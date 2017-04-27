@@ -39,4 +39,18 @@
 
 	
 </body>
+
+<script type="text/javascript">
+
+	function friendsQuery(){
+		var currentURL = window.location.origin;
+
+		$.ajax[{url: currentURL + "/../api/friends", method: "GET"}]
+		.done(function(friendMatches){
+			console.log(friendMatches)
+		})
+	}
+
+</script>
+
 </html>
