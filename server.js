@@ -1,22 +1,23 @@
 //Requires
 const path = require('path');
+var bodyParser = require('body-parser');
 
-var bodyParser = require('body-parser')
+var express = require('express');
+var app = express();
 
-var express = require('express')
-var app = express()
-
-var PORT = 3000
+var PORT = 8080;
  
-app.listen(PORT)
-
  // data parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-require('./routing/apiRoutes.js')(app);
-require('./routing/htmlRoutes.js')(app);
+require("./routing/apiRoutes.js")(app);
+require("./routing/htmlRoutes.js")(app);
 
+
+app.listen(PORT, function (){
+	console.log("App on " + PORT);
+});
 

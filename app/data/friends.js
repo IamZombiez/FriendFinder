@@ -14,7 +14,23 @@ var matchesArray = [
       1,
       1
       ]
-  }
+  },
+    {
+    name:"JLAW",
+    photo:"http://thehollywoodmag.com/wp-content/uploads/2015/08/JLaw-620x400.png",
+    scores:[
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+      ]
+    }
 ];
 
-module.exports = matchesArray
+module.exports = matchesArray;
